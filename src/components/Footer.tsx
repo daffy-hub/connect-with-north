@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -8,7 +9,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo and Slogan */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">TRUE NORTH</h3>
+            <div className="flex items-center space-x-3">
+              <img src={logo} alt="TRUE NORTH Logo" className="h-10 w-10" />
+              <h3 className="text-2xl font-bold">TRUE NORTH</h3>
+            </div>
             <p className="text-sm opacity-90">Engineering Smarter Connections.</p>
             <div className="flex space-x-4">
               <a
