@@ -9,6 +9,8 @@ import OurWork from "./pages/OurWork";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
+import WebsiteServices from "./pages/WebsiteServices";
+import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,9 +25,11 @@ const App = () => (
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/our-work" element={<OurWork />} />
+          <Route path="/website-services" element={<WebsiteServices />} />
           <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
