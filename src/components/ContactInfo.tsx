@@ -43,7 +43,7 @@ const ContactInfo = () => {
               <MapPin className="h-6 w-6 text-accent mt-1" />
               <div>
                 <h3 className="font-semibold mb-1">Location</h3>
-                <p className="text-muted-foreground">Infront of Dembel City Center, African Avenue, Addis Ababa</p>
+                <a href="https://maps.app.goo.gl/EKFMToMyHQDSbETB6" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">Infront of Dembel City Center, African Avenue, Addis Ababa</a>
               </div>
             </div>
           </div>
@@ -54,10 +54,10 @@ const ContactInfo = () => {
         <CardContent className="p-8">
           <h3 className="text-2xl font-bold mb-4">Connect With Us</h3>
           <div className="flex space-x-4">
-            <a href="#" className="flex items-center justify-center h-12 w-12 rounded-full bg-accent/10 hover:bg-accent hover:text-accent-foreground transition-all" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/truenorthtracking/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12 w-12 rounded-full bg-accent/10 hover:bg-accent hover:text-accent-foreground transition-all" aria-label="LinkedIn">
               <Linkedin className="h-6 w-6" />
             </a>
-            <a href="#" className="flex items-center justify-center h-12 w-12 rounded-full bg-accent/10 hover:bg-accent hover:text-accent-foreground transition-all" aria-label="Instagram">
+            <a href="https://instagram.com/truenorth.et" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12 w-12 rounded-full bg-accent/10 hover:bg-accent hover:text-accent-foreground transition-all" aria-label="Instagram">
               <Instagram className="h-6 w-6" />
             </a>
             <a href="https://wa.me/251991874507" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12 w-12 rounded-full bg-accent/10 hover:bg-accent hover:text-accent-foreground transition-all" aria-label="WhatsApp">

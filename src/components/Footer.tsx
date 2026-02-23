@@ -27,10 +27,10 @@ const Footer = () => {
             </div>
             <p className="text-sm opacity-90">Engineering Smarter Connections.</p>
             <div className="flex space-x-4">
-              <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/truenorthtracking/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" aria-label="Instagram">
+              <a href="https://instagram.com/truenorth.et" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="https://wa.me/251991874507" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" aria-label="WhatsApp">
@@ -65,7 +65,7 @@ const Footer = () => {
               </div>
               <div className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
-                <p>Infront of Dembel City Center, African Avenue, Addis Ababa</p>
+                <a href="https://maps.app.goo.gl/EKFMToMyHQDSbETB6" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Infront of Dembel City Center, African Avenue, Addis Ababa</a>
               </div>
               <p>📧 truenorth.et@outlook.com</p>
             </div>
