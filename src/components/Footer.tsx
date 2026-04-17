@@ -17,26 +17,26 @@ const TelegramIcon = ({ className }: { className?: string }) => (
 const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div className="container mx-auto px-4 py-10 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           {/* Logo and Slogan */}
-          <div className="space-y-4">
+          <div className="space-y-4 sm:col-span-2 md:col-span-1">
             <div className="flex items-center space-x-3">
               <img src={logo} alt="TRUE NORTH Logo" className="h-10 w-10" />
-              <h3 className="text-2xl font-bold">TRUE NORTH</h3>
+              <h3 className="text-xl sm:text-2xl font-bold">TRUE NORTH</h3>
             </div>
             <p className="text-sm opacity-90">Engineering Smarter Connections.</p>
             <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/company/truenorthtracking/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/truenorthtracking/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors p-1" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="https://instagram.com/truenorth.et" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" aria-label="Instagram">
+              <a href="https://instagram.com/truenorth.et" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors p-1" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="https://wa.me/251991874507" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" aria-label="WhatsApp">
+              <a href="https://wa.me/251991874507" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors p-1" aria-label="WhatsApp">
                 <WhatsAppIcon className="h-5 w-5" />
               </a>
-              <a href="https://t.me/251991874507" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" aria-label="Telegram">
+              <a href="https://t.me/251991874507" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors p-1" aria-label="Telegram">
                 <TelegramIcon className="h-5 w-5" />
               </a>
             </div>
@@ -46,19 +46,19 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <nav className="flex flex-col space-y-2">
-              <Link to="/" className="hover:text-accent transition-colors text-sm">Home</Link>
-              <Link to="/about" className="hover:text-accent transition-colors text-sm">About Us</Link>
-              <Link to="/our-work" className="hover:text-accent transition-colors text-sm">Our Work</Link>
-              <Link to="/website-services" className="hover:text-accent transition-colors text-sm">Website Services</Link>
-              <Link to="/news" className="hover:text-accent transition-colors text-sm">News</Link>
-              <Link to="/contact" className="hover:text-accent transition-colors text-sm">Contact</Link>
+              <Link to="/" className="hover:text-accent transition-colors text-sm py-1">Home</Link>
+              <Link to="/about" className="hover:text-accent transition-colors text-sm py-1">About Us</Link>
+              <Link to="/our-work" className="hover:text-accent transition-colors text-sm py-1">Our Work</Link>
+              <Link to="/website-services" className="hover:text-accent transition-colors text-sm py-1">Website Services</Link>
+              <Link to="/news" className="hover:text-accent transition-colors text-sm py-1">News</Link>
+              <Link to="/contact" className="hover:text-accent transition-colors text-sm py-1">Contact</Link>
             </nav>
           </div>
 
           {/* Contact Info */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Contact Us</h4>
-            <div className="space-y-2 text-sm">
+            <div className="space-y-3 text-sm">
               <div className="flex items-start space-x-2">
                 <Phone className="h-4 w-4 mt-0.5 shrink-0" />
                 <a href="tel:+251991874507" className="hover:text-accent transition-colors">+251 991 874 507</a>
@@ -67,7 +67,7 @@ const Footer = () => {
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
                 <a href="https://maps.app.goo.gl/EKFMToMyHQDSbETB6" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Infront of Dembel City Center, African Avenue, Addis Ababa</a>
               </div>
-              <p>📧 truenorth.et@outlook.com</p>
+              <p className="break-all">📧 truenorth.et@outlook.com</p>
             </div>
           </div>
 
@@ -75,13 +75,13 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Legal</h4>
             <nav className="flex flex-col space-y-2">
-              <Link to="/terms" className="hover:text-accent transition-colors text-sm">Terms & Services</Link>
+              <Link to="/terms" className="hover:text-accent transition-colors text-sm py-1">Terms & Services</Link>
             </nav>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-80">
+        <div className="border-t border-primary-foreground/20 pt-6 sm:pt-8 text-center text-xs sm:text-sm opacity-80">
           <p>Copyright © TRUE NORTH 2025. All Rights Reserved.</p>
         </div>
       </div>

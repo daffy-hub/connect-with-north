@@ -16,34 +16,34 @@ const TelegramIcon = ({ className }: { className?: string }) => (
 
 const ContactInfo = () => {
   return (
-    <div className="space-y-8 animate-fade-in-up">
+    <div className="space-y-6 sm:space-y-8 animate-fade-in-up">
       <Card className="border-2">
-        <CardContent className="p-8">
-          <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
-          <div className="space-y-6">
-            <div className="flex items-start space-x-4">
-              <Mail className="h-6 w-6 text-accent mt-1" />
-              <div>
+        <CardContent className="p-5 sm:p-8">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-5 sm:mb-6">Contact Information</h2>
+          <div className="space-y-5 sm:space-y-6">
+            <div className="flex items-start space-x-3 sm:space-x-4">
+              <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-accent mt-1 shrink-0" />
+              <div className="min-w-0">
                 <h3 className="font-semibold mb-1">Email</h3>
-                <a href="mailto:truenorth.et@outlook.com" className="text-muted-foreground hover:text-accent transition-colors">
+                <a href="mailto:truenorth.et@outlook.com" className="text-sm sm:text-base text-muted-foreground hover:text-accent transition-colors break-all">
                   truenorth.et@outlook.com
                 </a>
               </div>
             </div>
-            <div className="flex items-start space-x-4">
-              <Phone className="h-6 w-6 text-accent mt-1" />
-              <div>
+            <div className="flex items-start space-x-3 sm:space-x-4">
+              <Phone className="h-5 w-5 sm:h-6 sm:w-6 text-accent mt-1 shrink-0" />
+              <div className="min-w-0">
                 <h3 className="font-semibold mb-1">Phone</h3>
-                <a href="tel:+251991874507" className="text-muted-foreground hover:text-accent transition-colors">
+                <a href="tel:+251991874507" className="text-sm sm:text-base text-muted-foreground hover:text-accent transition-colors">
                   +251 991 874 507
                 </a>
               </div>
             </div>
-            <div className="flex items-start space-x-4">
-              <MapPin className="h-6 w-6 text-accent mt-1" />
-              <div>
+            <div className="flex items-start space-x-3 sm:space-x-4">
+              <MapPin className="h-5 w-5 sm:h-6 sm:w-6 text-accent mt-1 shrink-0" />
+              <div className="min-w-0">
                 <h3 className="font-semibold mb-1">Location</h3>
-                <a href="https://maps.app.goo.gl/EKFMToMyHQDSbETB6" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">Infront of Dembel City Center, African Avenue, Addis Ababa</a>
+                <a href="https://maps.app.goo.gl/EKFMToMyHQDSbETB6" target="_blank" rel="noopener noreferrer" className="text-sm sm:text-base text-muted-foreground hover:text-accent transition-colors">Infront of Dembel City Center, African Avenue, Addis Ababa</a>
               </div>
             </div>
           </div>
@@ -51,9 +51,9 @@ const ContactInfo = () => {
       </Card>
 
       <Card className="border-2">
-        <CardContent className="p-8">
-          <h3 className="text-2xl font-bold mb-4">Connect With Us</h3>
-          <div className="flex space-x-4">
+        <CardContent className="p-5 sm:p-8">
+          <h3 className="text-xl sm:text-2xl font-bold mb-4">Connect With Us</h3>
+          <div className="flex flex-wrap gap-3 sm:gap-4">
             <a href="https://www.linkedin.com/company/truenorthtracking/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-12 w-12 rounded-full bg-accent/10 hover:bg-accent hover:text-accent-foreground transition-all" aria-label="LinkedIn">
               <Linkedin className="h-6 w-6" />
             </a>

@@ -11,19 +11,19 @@ const Home = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+      <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 leading-tight bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
               Engineering Smarter Connections.
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-base sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
               TRUE NORTH develops advanced vehicle security systems, GPS tracking solutions, and
               workforce management operations connecting companies across borders.
             </p>
             <Link to="/our-work">
-              <Button size="lg" className="text-lg px-8 py-6 hover:scale-105 transition-transform">
+              <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 hover:scale-105 transition-transform">
                 Explore Our Work
               </Button>
             </Link>
@@ -32,17 +32,17 @@ const Home = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section className="py-12 sm:py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
-          <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl font-bold mb-6">Innovation, Technology & Reliability</h2>
-            <p className="text-lg text-muted-foreground">
+          <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-16 animate-fade-in-up">
+            <h2 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6">Innovation, Technology & Reliability</h2>
+            <p className="text-base sm:text-lg text-muted-foreground">
               At TRUE NORTH, we combine cutting-edge technology with unwavering commitment to
               deliver solutions that empower businesses and secure assets across borders.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
                 icon: Shield,
@@ -66,9 +66,9 @@ const Home = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-6 text-center">
-                  <item.icon className="h-12 w-12 mx-auto mb-4 text-accent" />
-                  <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
+                  <item.icon className="h-10 w-10 sm:h-12 sm:w-12 mx-auto mb-3 sm:mb-4 text-accent" />
+                  <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">{item.title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -77,9 +77,9 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 px-4">
+      <section className="py-12 sm:py-20 px-4">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-center">
             {[
               { label: "Founded", value: "2025" },
               { label: "Speed Limiters Installed", value: "3,000+" },
@@ -87,11 +87,11 @@ const Home = () => {
             ].map((stat, index) => (
               <div
                 key={index}
-                className="p-8 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 animate-fade-in"
+                className="p-6 sm:p-8 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 animate-fade-in"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="text-5xl font-bold text-accent mb-2">{stat.value}</div>
-                <div className="text-lg text-muted-foreground">{stat.label}</div>
+                <div className="text-3xl sm:text-5xl font-bold text-accent mb-2 break-words">{stat.value}</div>
+                <div className="text-base sm:text-lg text-muted-foreground">{stat.label}</div>
               </div>
             ))}
           </div>
