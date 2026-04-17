@@ -78,9 +78,9 @@ const ContactForm = () => {
 
   return (
     <Card className="border-2 hover:border-accent transition-all animate-fade-in">
-      <CardContent className="p-8">
-        <h2 className="text-3xl font-bold mb-6">Send Us a Message</h2>
-        <form onSubmit={handleSubmit} className="space-y-6">
+      <CardContent className="p-5 sm:p-8">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-5 sm:mb-6">Send Us a Message</h2>
+        <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
           <div className="space-y-2">
             <Label htmlFor="name">Name</Label>
             <Input id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="Your full name" />

@@ -67,12 +67,12 @@ const Navigation = () => {
         isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <img src={logo} alt="TRUE NORTH Logo" className="h-12 w-12 transition-transform group-hover:scale-110" />
-            <div className="text-xl font-bold text-primary transition-all group-hover:text-accent">
+          <Link to="/" className="flex items-center space-x-2 sm:space-x-3 group min-w-0">
+            <img src={logo} alt="TRUE NORTH Logo" className="h-9 w-9 sm:h-12 sm:w-12 transition-transform group-hover:scale-110 shrink-0" />
+            <div className="text-base sm:text-xl font-bold text-primary transition-all group-hover:text-accent truncate">
               TRUE NORTH
             </div>
           </Link>
@@ -120,12 +120,12 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden flex items-center space-x-2">
+          <div className="lg:hidden flex items-center space-x-0.5">
             <a
               href="https://wa.me/251991874507"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-accent transition-colors"
+              className="hover:text-accent transition-colors p-2"
               aria-label="WhatsApp"
             >
               <WhatsAppIcon className="h-5 w-5" />
@@ -134,7 +134,7 @@ const Navigation = () => {
               href="https://t.me/251991874507"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-accent transition-colors"
+              className="hover:text-accent transition-colors p-2"
               aria-label="Telegram"
             >
               <TelegramIcon className="h-5 w-5" />
@@ -143,6 +143,7 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
+              aria-label="Toggle theme"
             >
               {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
@@ -150,6 +151,7 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? "Close menu" : "Open menu"}
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -158,15 +160,15 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden pb-6 animate-fade-in">
-            <div className="flex flex-col space-y-4">
+          <div className="lg:hidden pb-6 pt-2 animate-fade-in border-t border-border/50 mt-2">
+            <div className="flex flex-col space-y-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
                   onClick={() => setIsOpen(false)}
-                  className={`text-base font-medium transition-colors hover:text-accent ${
-                    isActive(link.to) ? "text-accent" : "text-foreground"
+                  className={`text-base font-medium transition-colors hover:text-accent py-3 px-2 rounded-md hover:bg-muted ${
+                    isActive(link.to) ? "text-accent bg-muted" : "text-foreground"
                   }`}
                 >
                   {link.label}
