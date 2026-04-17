@@ -54,11 +54,11 @@ const OurWork = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-primary/5 via-background to-accent/5">
+      <section className="pt-24 sm:pt-32 pb-10 sm:pb-16 px-4 bg-gradient-to-br from-primary/5 via-background to-accent/5">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Work</h1>
-            <p className="text-xl text-muted-foreground">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6">Our Work</h1>
+            <p className="text-base sm:text-xl text-muted-foreground">
               Delivering intelligent solutions across vehicle security, GPS tracking, and
               international workforce management.
             </p>
@@ -67,9 +67,9 @@ const OurWork = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4">
+      <section className="py-12 sm:py-20 px-4">
         <div className="container mx-auto">
-          <div className="space-y-16">
+          <div className="space-y-10 sm:space-y-16">
             {services.map((service, index) => (
               <Card
                 key={index}
@@ -79,19 +79,19 @@ const OurWork = () => {
                 <CardContent className="p-0">
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     {/* Content */}
-                    <div className="p-8 lg:p-12">
-                      <service.icon className="h-16 w-16 text-accent mb-6" />
-                      <h2 className="text-3xl font-bold mb-4">{service.title}</h2>
-                      <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                    <div className="p-6 sm:p-8 lg:p-12">
+                      <service.icon className="h-12 w-12 sm:h-16 sm:w-16 text-accent mb-4 sm:mb-6" />
+                      <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">{service.title}</h2>
+                      <p className="text-base sm:text-lg text-muted-foreground mb-5 sm:mb-6 leading-relaxed">
                         {service.description}
                       </p>
                       <div className="space-y-2">
-                        <h3 className="text-lg font-semibold mb-3">Key Features:</h3>
+                        <h3 className="text-base sm:text-lg font-semibold mb-3">Key Features:</h3>
                         <ul className="space-y-2">
                           {service.features.map((feature, idx) => (
                             <li key={idx} className="flex items-start">
-                              <span className="text-accent mr-2">✓</span>
-                              <span className="text-muted-foreground">{feature}</span>
+                              <span className="text-accent mr-2 shrink-0">✓</span>
+                              <span className="text-sm sm:text-base text-muted-foreground">{feature}</span>
                             </li>
                           ))}
                         </ul>
@@ -99,7 +99,7 @@ const OurWork = () => {
                     </div>
 
                     {/* Visual */}
-                    <div className="bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center p-12">
+                    <div className="hidden lg:flex bg-gradient-to-br from-primary/10 to-accent/10 items-center justify-center p-12">
                       <service.icon className="h-48 w-48 text-accent/20" />
                     </div>
                   </div>
@@ -111,16 +111,16 @@ const OurWork = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section className="py-12 sm:py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <h2 className="text-4xl font-bold mb-6">Ready to Work with Us?</h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <h2 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6">Ready to Work with Us?</h2>
+            <p className="text-base sm:text-xl text-muted-foreground mb-6 sm:mb-8">
               Whether you need vehicle security solutions or workforce management services, TRUE
               NORTH is here to help.
             </p>
             <a href="/contact">
-              <button className="bg-accent text-accent-foreground px-8 py-4 rounded-md text-lg font-semibold hover:scale-105 transition-transform">
+              <button className="bg-accent text-accent-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-md text-base sm:text-lg font-semibold hover:scale-105 transition-transform">
                 Get in Touch
               </button>
             </a>

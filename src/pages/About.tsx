@@ -9,11 +9,11 @@ const About = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-primary/5 via-background to-accent/5">
+      <section className="pt-24 sm:pt-32 pb-10 sm:pb-16 px-4 bg-gradient-to-br from-primary/5 via-background to-accent/5">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">About TRUE NORTH</h1>
-            <p className="text-xl text-muted-foreground">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6">About TRUE NORTH</h1>
+            <p className="text-base sm:text-xl text-muted-foreground">
               Building intelligent systems that make movement, work, and communication simpler,
               safer, and smarter.
             </p>
@@ -22,14 +22,14 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 px-4">
+      <section className="py-12 sm:py-20 px-4">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-20">
             <Card className="border-2 hover:border-accent transition-all hover:shadow-lg animate-fade-in">
-              <CardContent className="p-8">
-                <Target className="h-12 w-12 text-accent mb-4" />
-                <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+              <CardContent className="p-6 sm:p-8">
+                <Target className="h-10 w-10 sm:h-12 sm:w-12 text-accent mb-4" />
+                <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Our Mission</h2>
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                   To build intelligent systems that make movement, work, and communication simpler,
                   safer, and smarter.
                 </p>
@@ -37,10 +37,10 @@ const About = () => {
             </Card>
 
             <Card className="border-2 hover:border-accent transition-all hover:shadow-lg animate-fade-in">
-              <CardContent className="p-8">
-                <Eye className="h-12 w-12 text-accent mb-4" />
-                <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+              <CardContent className="p-6 sm:p-8">
+                <Eye className="h-10 w-10 sm:h-12 sm:w-12 text-accent mb-4" />
+                <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Our Vision</h2>
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                   To be a leader in intelligent technology and international workforce solutions.
                 </p>
               </CardContent>
@@ -48,9 +48,9 @@ const About = () => {
           </div>
 
           {/* Values */}
-          <div className="max-w-4xl mx-auto mb-20">
-            <h2 className="text-4xl font-bold text-center mb-12 animate-fade-in-up">Our Values</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="max-w-4xl mx-auto mb-12 sm:mb-20">
+            <h2 className="text-2xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 animate-fade-in-up">Our Values</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               {[
                 {
                   icon: Heart,
@@ -86,10 +86,10 @@ const About = () => {
           {/* Company Story */}
           <div className="max-w-3xl mx-auto animate-fade-in-up">
             <Card className="border-2">
-              <CardContent className="p-8">
-                <Zap className="h-12 w-12 text-accent mb-6" />
-                <h2 className="text-3xl font-bold mb-6">Our Story</h2>
-                <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+              <CardContent className="p-6 sm:p-8">
+                <Zap className="h-10 w-10 sm:h-12 sm:w-12 text-accent mb-4 sm:mb-6" />
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Our Story</h2>
+                <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
                   <p>
                     TRUE NORTH began as a vehicle technology company, driven by a vision to enhance
                     safety and security on Ethiopian roads. Our journey started with the successful
