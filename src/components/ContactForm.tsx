@@ -12,6 +12,15 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  subject: z.string().trim().min(1, "Subject is required").max(100),
+  message: z.string().trim().min(1, "Message is required").max(2000, "Message must be less than 2000 characters"),
+});
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -20,10 +29,35 @@ const ContactForm = () => {
     subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const result = contactSchema.safeParse(formData);
+    if (!result.success) {
+      toast({
+        title: "Invalid input",
+        description: result.error.issues[0].message,
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    const { error } = await supabase.from("contact_messages").insert(result.data);
+    setIsSubmitting(false);
+
+    if (error) {
+      toast({
+        title: "Couldn't send message",
+        description: "Please try again in a moment.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     toast({
       title: "Message Sent!",
       description: "Thank you for contacting us. We'll get back to you soon.",
@@ -67,7 +101,9 @@ const ContactForm = () => {
             <Label htmlFor="message">Message</Label>
             <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required placeholder="Tell us how we can help..." rows={6} />
           </div>
-          <Button type="submit" size="lg" className="w-full">Send Message</Button>
+          <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+            {isSubmitting ? "Sending..." : "Send Message"}
+          </Button>
         </form>
       </CardContent>
     </Card>
