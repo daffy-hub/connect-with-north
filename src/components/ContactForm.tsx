@@ -46,7 +46,12 @@ const ContactForm = () => {
     }
 
     setIsSubmitting(true);
-    const { error } = await supabase.from("contact_messages").insert(result.data);
+    const { error } = await supabase.from("contact_messages").insert({
+      name: formData.name.trim(),
+      email: formData.email.trim(),
+      subject: formData.subject.trim(),
+      message: formData.message.trim(),
+    });
     setIsSubmitting(false);
 
     if (error) {
